@@ -1,0 +1,19 @@
+{
+  "pages": [
+    {
+      "id": 1,
+      "title": "index",
+      "content": "O seu evento pelo melhor ângulo",
+      "image": "img/image04.jpg"
+    },
+    {
+      "id": 1,
+      "title": "about",
+      "content": "Formado em Sociologia pela Universidade Estadual de Campinas, Chun, apelido dado nos tempos da vida universitária, teve seu reencontro com a fotografia ainda na graduação por meio de aulas e oficinas. Através dessas experiências despertou sua paixão pela busca do olhar, se lançando assim na vida de fotógrafo. Em 2015, ingressa na equipe de fotógrafos do Fesverestival - Festival Internacional de Teatro de Campinas e no I Festival Camdança Mirante, realizado na região Metropolitana de Campinas. Em 2016 inicia seus trabalhos na Mostra Jazz  Campinas. Em 2017 é convidado a compor o grupo de fotógrafos do Projeto Imagens Efêmeras, produzido pela Jatobá Cultural com contemplação do ProacSP.",
+      "image": ""
+    }
+  ],
+  "photos": [{ "id": 1, "path": "", "albumsId": 1, "tagsId": [1, 2, 3] }],
+  "albums": [{ "id": 1, "title": "dança", "postId": 1 }],
+  "tags": [{ "id": 1, "tag": "landscape" }, { "id": 2, "tag": "PB" }]
+}

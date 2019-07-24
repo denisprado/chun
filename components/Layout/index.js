@@ -1,68 +1,70 @@
-import Navbar from '../Navbar'
-import Footer from '../Footer'
-
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const Layout = props => (
   <>
     <div className="layout">
       <Navbar />
-      <div className="content">
-        {props.children}
-      </div>
+      <div className="content">{props.children}</div>
       <Footer />
     </div>
     <style jsx>{`
-    div.layout {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 15px;
-    }
-    
+      div.layout {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+      }
+
+      div.content {
+        max-width: 1024px;
+        margin: 0 auto;
+      }
     `}</style>
     <style jsx global>{`
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      outline: 0;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: 0;
+      }
 
-    html, body, #__next{
-      height: 100%;
-    }
+      html,
+      body,
+      #__next {
+        height: 100%;
+      }
 
-    body{
-      text-rendering: optimizeLegibility !important;
-      -webkit-font-smoothing: antialiased !important;
-      background: #373737;
-      color:#fff;
-      font-family: 'Exo 2', sans-serif;
-    }
+      body {
+        text-rendering: optimizeLegibility !important;
+        -webkit-font-smoothing: antialiased !important;
+        background: #373737;
+        color: #fff;
+        font-family: "Exo 2", sans-serif;
+      }
 
-    button{
-      cursor: pointer;
-    }
+      button {
+        cursor: pointer;
+      }
 
-    a {
-      text-decoration: none;
-      color: blue;
-      padding: 0 15px 0 0;
-      color: #9C9C9C;
-    }
-  
-    a:hover {
-      color: #8A8A8A;
-    }
+      a {
+        text-decoration: none;
+        color: blue;
+        padding: 0 15px 0 0;
+        color: #9c9c9c;
+      }
 
-    a:active: {
-      color:#777777
-    }
+      a:hover {
+        color: #8a8a8a;
+      }
 
+      a:active: {
+        color: #777777;
+      }
     `}</style>
   </>
-)
+);
 
 export default Layout;
 
