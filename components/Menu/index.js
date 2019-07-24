@@ -1,22 +1,40 @@
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const Menu = () => (
-  <>
-    <div>
-      <Link href="/album">
-        <a>Álbum</a>
-      </Link>
-      <Link href="/about">
-        <a>Sobre</a>
-      </Link>
-      <Link href="/contact">
-        <a>Contato</a>
-      </Link>
-    </div>
-    <style jsx>{`
+function Menu() {
+  const [pages, setPages] = useState(null);
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch('http://localhost:3333/pages?id_ne=1');
+      const data = await res.json();
+      setPages(data)
+    }
+    fetchData()
+  }, []);
+
+  return (
+    <>
+      <div>
+
+        {pages ? pages.map(page => (
+          <Link key={page.id} href="/p/[id]" as={`/p/${page.id}`}>
+            <a>{page.title}</a>
+          </Link>
+        )) : null}
+        <Link href="/album">
+          <a>album</a>
+        </Link>
+        <Link href="/contact">
+          <a>contato</a>
+        </Link>
+      </div>
+      <style jsx>{`
   `}
-    </style>
-  </>
-);
+      </style>
+    </>
+  );
+}
 
 export default Menu;

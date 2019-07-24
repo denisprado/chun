@@ -1,59 +1,29 @@
-import Layout from "../components/Layout";
-import fetch from "isomorphic-unfetch";
-import getConfig from "next/config";
+import Layout from '../components/Layout';
+import fetch from 'isomorphic-unfetch';
+import ReactHtmlParser from 'react-html-parser';
 
-const { publicRuntimeConfig } = getConfig();
-const { API_URL } = publicRuntimeConfig;
-const Index = props => (
-  <>
-    <Layout>
-      {props.index
-        ? props.index.map(page => (
-            <div className="hero-container" key={page.id}>
-              <h1 className="hero-text">{page.content}</h1>
-              <img
-                className="hero-image"
-                src={"//localhost:3333/" + page.image}
-                alt={page.content}
-                width="60%"
-              />
-            </div>
-          ))
-        : null}
-    </Layout>
-
-    <style jsx>
-      {`
-        .hero-container {
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-        }
-        .hero-text {
-          flex-grow: 4;
-          margin-right: 15px;
-          font-size: 72px;
-          font-weight: 100;
-        }
-        .hero-image {
-          flex-grow: 1;
-          border: 10px solid #fff;
-        }
-      `}
-    </style>
-  </>
+const Home = ({ page }) => (
+  <Layout>
+    <div className={`row ${page.classes.row}`} key={page.id}>
+      <p className={`${page.classes.col.txt}`}>{ReactHtmlParser(page.content)}</p>
+      <div className={`${page.classes.col.img}`}>
+        <img
+          className="hero-image"
+          src={`//localhost:3333/${page.photos[0].path}`}
+          alt={page.content}
+          width="100%"
+        />
+      </div>
+    </div>
+  </Layout >
 );
 
-Index.getInitialProps = async function() {
-  const res = await fetch("http://localhost:3333/pages?title=index");
-  const data = await res.json();
+Home.getInitialProps = async function (context) {
+  const { id } = context.query;
+  const res = await fetch(`http://localhost:3333/pages/1?_embed=photos`);
+  const page = await res.json();
 
-  console.log(`Show data fetched. Count: ${data.length}`);
-
-  return {
-    index: data.map(entry => entry)
-  };
+  return { page };
 };
 
-export default Index;
+export default Home;

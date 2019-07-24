@@ -3,17 +3,42 @@
     {
       "id": 1,
       "title": "index",
-      "content": "O seu evento pelo melhor ângulo",
-      "image": "img/image04.jpg"
+      "content": "<h1>O seu evento pelo melhor ângulo</h1>",
+      "classes": {
+        "row": "image-right",
+        "col": {
+          "img": "column-2",
+          "txt": "column"
+        }
+      }
     },
     {
-      "id": 1,
+      "id": 2,
       "title": "about",
       "content": "Formado em Sociologia pela Universidade Estadual de Campinas, Chun, apelido dado nos tempos da vida universitária, teve seu reencontro com a fotografia ainda na graduação por meio de aulas e oficinas. Através dessas experiências despertou sua paixão pela busca do olhar, se lançando assim na vida de fotógrafo. Em 2015, ingressa na equipe de fotógrafos do Fesverestival - Festival Internacional de Teatro de Campinas e no I Festival Camdança Mirante, realizado na região Metropolitana de Campinas. Em 2016 inicia seus trabalhos na Mostra Jazz  Campinas. Em 2017 é convidado a compor o grupo de fotógrafos do Projeto Imagens Efêmeras, produzido pela Jatobá Cultural com contemplação do ProacSP.",
-      "image": ""
+      "classes": {
+        "row": "image-left",
+        "col": {
+          "img": "column",
+          "txt": "column"
+        }
+      }
     }
   ],
-  "photos": [{ "id": 1, "path": "", "albumsId": 1, "tagsId": [1, 2, 3] }],
-  "albums": [{ "id": 1, "title": "dança", "postId": 1 }],
-  "tags": [{ "id": 1, "tag": "landscape" }, { "id": 2, "tag": "PB" }]
+  "photos": [
+    { "id": 1, "path": "img/image04.jpg", "pageId": 1, "albumId": 1 },
+    { "id": 2, "path": "img/image02.jpg", "pageId": 2, "albumId": 2 },
+    { "id": 1, "path": "img/image03.jpg", "pageId": 3, "albumId": 3 },
+    { "id": 1, "path": "img/image05.jpg", "pageId": 4, "albumId": 4 }
+  ],
+  "albums": [
+    { "id": 1, "title": "música" },
+    { "id": 2, "title": "dança" },
+    { "id": 3, "title": "teatro" },
+    { "id": 4, "title": "outros" }
+  ],
+  "tags": [
+    { "id": 1, "tag": "landscape", "photoId": 1 },
+    { "id": 2, "tag": "PB", "photoId": 1 }
+  ]
 }

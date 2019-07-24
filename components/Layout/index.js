@@ -1,6 +1,7 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
+
 const Layout = props => (
   <>
     <div className="layout">
@@ -18,8 +19,8 @@ const Layout = props => (
       }
 
       div.content {
-        max-width: 1024px;
-        margin: 0 auto;
+        margin: 0 16.66%;
+        margin:0 calc(100% / 6);
       }
     `}</style>
     <style jsx global>{`
@@ -48,6 +49,11 @@ const Layout = props => (
         cursor: pointer;
       }
 
+      p{
+        font-weight:200;
+        font-size:22px;
+      }
+
       a {
         text-decoration: none;
         color: blue;
@@ -61,6 +67,42 @@ const Layout = props => (
 
       a:active: {
         color: #777777;
+      }
+
+      h1{
+        font-size: 60px;
+        font-weight: 100;
+      }
+
+      .hero-image {
+        border: 10px solid #fff;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .image-left{
+        flex-direction: row-reverse;
+      }
+      
+      .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis:100%;
+        flex: 3;
+        margin-right: 15px;
+      }
+
+      .column-2 {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 5;
+        margin-right: 15px;
       }
     `}</style>
   </>
