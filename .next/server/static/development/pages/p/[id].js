@@ -1773,7 +1773,7 @@ var Page = function Page(_ref) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "row ".concat(page.classes.row),
+    className: "row",
     key: page.id,
     __source: {
       fileName: _jsxFileName,
@@ -1781,14 +1781,14 @@ var Page = function Page(_ref) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "".concat(page.classes.col.txt),
+    className: "column",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
   }, react_html_parser__WEBPACK_IMPORTED_MODULE_5___default()(page.content)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "".concat(page.classes.col.img),
+    className: "column",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9

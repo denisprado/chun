@@ -4,9 +4,9 @@ import ReactHtmlParser from 'react-html-parser';
 
 const Home = ({ page }) => (
   <Layout>
-    <div className={`row ${page.classes.row}`} key={page.id}>
-      <p className={`${page.classes.col.txt}`}>{ReactHtmlParser(page.content)}</p>
-      <div className={`${page.classes.col.img}`}>
+    <div className="row" key={page.id}>
+      <p className="column">{ReactHtmlParser(page.content)}</p>
+      <div className="column">
         <img
           className="hero-image"
           src={`//localhost:3333/${page.photos[0].path}`}
