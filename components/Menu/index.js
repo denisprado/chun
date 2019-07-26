@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 function Menu() {
-  const [pages, setPages] = useState(null);
+  const [pages, setPages] = useState([]);
 
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('http://localhost:3333/pages?id_ne=1');
+      const res = await fetch('http://localhost:3333/pages');
       const data = await res.json();
       setPages(data)
     }
@@ -17,7 +17,7 @@ function Menu() {
   return (
     <>
       <div>
-
+        {console.log(pages)}
         {pages ? pages.map(page => (
           <Link key={page.id} href="/p/[id]" as={`/p/${page.id}`}>
             <a>{page.title}</a>

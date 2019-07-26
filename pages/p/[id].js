@@ -7,12 +7,14 @@ const Page = ({ page }) => (
     <div className="row" key={page.id}>
       <p className="column">{ReactHtmlParser(page.content)}</p>
       <div className="column">
-        <img
-          className="hero-image"
-          src={`//localhost:3333/${page.photos[0].path}`}
-          alt={page.content}
-          width="100%"
-        />
+        {page.image ? page.image.map(image => {
+          <img
+            className="hero-image"
+            src={`//localhost:3333/${image.path}`}
+            alt={page.content}
+            width="100%"
+          />
+        }) : null}
       </div>
     </div>
   </Layout >
@@ -20,7 +22,7 @@ const Page = ({ page }) => (
 
 Page.getInitialProps = async function (context) {
   const { id } = context.query;
-  const res = await fetch(`http://localhost:3333/pages/${id}?_embed=photos`);
+  const res = await fetch(`http://localhost:3333/pages/${id}`);
   const page = await res.json();
 
   return { page };

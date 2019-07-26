@@ -335,7 +335,7 @@ var _jsxFileName = "C:\\Users\\denis\\Documents\\chun\\components\\Menu\\index.j
 
 
 function Menu() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(null),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]),
       _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState, 2),
       pages = _useState2[0],
       setPages = _useState2[1];
@@ -353,7 +353,7 @@ function Menu() {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return fetch('http://localhost:3333/pages?id_ne=1');
+                return fetch('http://localhost:3333/pages');
 
               case 2:
                 res = _context.sent;
@@ -386,7 +386,7 @@ function Menu() {
       lineNumber: 19
     },
     __self: this
-  }, pages ? pages.map(function (page) {
+  }, console.log(pages), pages ? pages.map(function (page) {
     return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
       key: page.id,
       href: "/p/[id]",
@@ -435,7 +435,7 @@ function Menu() {
   }, "contato"))), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default.a, {
     id: "4042915514",
     __self: this
-  }, "\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcZGVuaXNcXERvY3VtZW50c1xcY2h1blxcY29tcG9uZW50c1xcTWVudVxcaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBZ0NrQiIsImZpbGUiOiJDOlxcVXNlcnNcXGRlbmlzXFxEb2N1bWVudHNcXGNodW5cXGNvbXBvbmVudHNcXE1lbnVcXGluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlLCB1c2VFZmZlY3QgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluayc7XHJcblxyXG5mdW5jdGlvbiBNZW51KCkge1xyXG4gIGNvbnN0IFtwYWdlcywgc2V0UGFnZXNdID0gdXNlU3RhdGUobnVsbCk7XHJcblxyXG5cclxuICB1c2VFZmZlY3QoKCkgPT4ge1xyXG4gICAgY29uc3QgZmV0Y2hEYXRhID0gYXN5bmMgKCkgPT4ge1xyXG4gICAgICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaCgnaHR0cDovL2xvY2FsaG9zdDozMzMzL3BhZ2VzP2lkX25lPTEnKTtcclxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlcy5qc29uKCk7XHJcbiAgICAgIHNldFBhZ2VzKGRhdGEpXHJcbiAgICB9XHJcbiAgICBmZXRjaERhdGEoKVxyXG4gIH0sIFtdKTtcclxuXHJcbiAgcmV0dXJuIChcclxuICAgIDw+XHJcbiAgICAgIDxkaXY+XHJcblxyXG4gICAgICAgIHtwYWdlcyA/IHBhZ2VzLm1hcChwYWdlID0+IChcclxuICAgICAgICAgIDxMaW5rIGtleT17cGFnZS5pZH0gaHJlZj1cIi9wL1tpZF1cIiBhcz17YC9wLyR7cGFnZS5pZH1gfT5cclxuICAgICAgICAgICAgPGE+e3BhZ2UudGl0bGV9PC9hPlxyXG4gICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgICkpIDogbnVsbH1cclxuICAgICAgICA8TGluayBocmVmPVwiL2FsYnVtXCI+XHJcbiAgICAgICAgICA8YT5hbGJ1bTwvYT5cclxuICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgPExpbmsgaHJlZj1cIi9jb250YWN0XCI+XHJcbiAgICAgICAgICA8YT5jb250YXRvPC9hPlxyXG4gICAgICAgIDwvTGluaz5cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxzdHlsZSBqc3g+e2BcclxuICBgfVxyXG4gICAgICA8L3N0eWxlPlxyXG4gICAgPC8+XHJcbiAgKTtcclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgTWVudTsiXX0= */\n/*@ sourceURL=C:\\Users\\denis\\Documents\\chun\\components\\Menu\\index.js */"));
+  }, "\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcZGVuaXNcXERvY3VtZW50c1xcY2h1blxcY29tcG9uZW50c1xcTWVudVxcaW5kZXguanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBZ0NrQiIsImZpbGUiOiJDOlxcVXNlcnNcXGRlbmlzXFxEb2N1bWVudHNcXGNodW5cXGNvbXBvbmVudHNcXE1lbnVcXGluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlLCB1c2VFZmZlY3QgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluayc7XHJcblxyXG5mdW5jdGlvbiBNZW51KCkge1xyXG4gIGNvbnN0IFtwYWdlcywgc2V0UGFnZXNdID0gdXNlU3RhdGUoW10pO1xyXG5cclxuXHJcbiAgdXNlRWZmZWN0KCgpID0+IHtcclxuICAgIGNvbnN0IGZldGNoRGF0YSA9IGFzeW5jICgpID0+IHtcclxuICAgICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goJ2h0dHA6Ly9sb2NhbGhvc3Q6MzMzMy9wYWdlcycpO1xyXG4gICAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzLmpzb24oKTtcclxuICAgICAgc2V0UGFnZXMoZGF0YSlcclxuICAgIH1cclxuICAgIGZldGNoRGF0YSgpXHJcbiAgfSwgW10pO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPD5cclxuICAgICAgPGRpdj5cclxuICAgICAgICB7Y29uc29sZS5sb2cocGFnZXMpfVxyXG4gICAgICAgIHtwYWdlcyA/IHBhZ2VzLm1hcChwYWdlID0+IChcclxuICAgICAgICAgIDxMaW5rIGtleT17cGFnZS5pZH0gaHJlZj1cIi9wL1tpZF1cIiBhcz17YC9wLyR7cGFnZS5pZH1gfT5cclxuICAgICAgICAgICAgPGE+e3BhZ2UudGl0bGV9PC9hPlxyXG4gICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgICkpIDogbnVsbH1cclxuICAgICAgICA8TGluayBocmVmPVwiL2FsYnVtXCI+XHJcbiAgICAgICAgICA8YT5hbGJ1bTwvYT5cclxuICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgPExpbmsgaHJlZj1cIi9jb250YWN0XCI+XHJcbiAgICAgICAgICA8YT5jb250YXRvPC9hPlxyXG4gICAgICAgIDwvTGluaz5cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxzdHlsZSBqc3g+e2BcclxuICBgfVxyXG4gICAgICA8L3N0eWxlPlxyXG4gICAgPC8+XHJcbiAgKTtcclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgTWVudTsiXX0= */\n/*@ sourceURL=C:\\Users\\denis\\Documents\\chun\\components\\Menu\\index.js */"));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
@@ -1794,17 +1794,19 @@ var Page = function Page(_ref) {
       lineNumber: 9
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    className: "hero-image",
-    src: "//localhost:3333/".concat(page.photos[0].path),
-    alt: page.content,
-    width: "100%",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: this
-  }))));
+  }, page.image ? page.image.map(function (image) {
+    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
+      className: "hero-image",
+      src: "//localhost:3333/".concat(image.path),
+      alt: page.content,
+      width: "100%",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    });
+  }) : null)));
 };
 
 Page.getInitialProps =
@@ -1820,7 +1822,7 @@ function () {
           case 0:
             id = context.query.id;
             _context.next = 3;
-            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()("http://localhost:3333/pages/".concat(id, "?_embed=photos"));
+            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_4___default()("http://localhost:3333/pages/".concat(id));
 
           case 3:
             res = _context.sent;
