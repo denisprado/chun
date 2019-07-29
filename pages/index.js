@@ -1,17 +1,20 @@
 import Layout from "../components/Layout";
 import fetch from "isomorphic-unfetch";
 import ReactHtmlParser from "react-html-parser";
-import { Column } from "./styles";
+import { server } from "../config";
+
+import { Column } from "../styles/global";
+
 const Home = ({ page }) => (
   <Layout>
-    <div className="row" key={page.id}>
-      <Column col={2}>{ReactHtmlParser(page.content)}</Column>
-      <Column col={6}>
+    <div className="row">
+      <Column col={5}>{ReactHtmlParser(page.content)}</Column>
+      <Column col={5}>
         {page.image
           ? page.image.map(image => {
               <img
                 className="hero-image"
-                src={`//localhost:3333/${image.path}`}
+                src={`${server}/${image.path}`}
                 alt={page.content}
                 width="100%"
               />;
@@ -24,7 +27,7 @@ const Home = ({ page }) => (
 
 Home.getInitialProps = async function(context) {
   const { id } = context.query;
-  const res = await fetch(`http://localhost:3333/pages/2`);
+  const res = await fetch(`${server}/pages/2`);
   const page = await res.json();
 
   return { page };

@@ -1,5 +1,6 @@
 import Layout from "../../components/Layout";
 import fetch from "isomorphic-unfetch";
+import { server } from "../../config";
 
 const File = ({ file }) => (
   <Layout>
@@ -20,7 +21,7 @@ const File = ({ file }) => (
 
 File.getInitialProps = async function(context) {
   const { id } = context.query;
-  const res = await fetch(`http://localhost:3333/files/${id}`);
+  const res = await fetch(`${server}/files/${id}`);
   const files = await res.json();
   const file = files[0];
   return { file };

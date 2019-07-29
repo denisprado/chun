@@ -1,8 +1,9 @@
 import Layout from "../components/Layout";
 import fetch from "isomorphic-unfetch";
 import Link from "next/link";
+import { server } from "../config";
 
-import { Column } from "./styles";
+import { Column } from "../styles/global";
 
 const Albums = ({ albums }) => (
   <Layout>
@@ -10,12 +11,12 @@ const Albums = ({ albums }) => (
       {albums
         ? albums.map(album => (
             <Link key={album.id} href={`/a/${album.id}`}>
-              <Column col={1}>
+              <Column col={3}>
                 <img
                   className="hero-image"
-                  src={`http://localhost:3333/files/${album.Files[0].path}`}
+                  src={`${server}/files/${album.Files[0].path}`}
                   alt={album.title}
-                  width="100%"
+                  width="90%"
                 />
                 <p>{album.title}</p>
               </Column>

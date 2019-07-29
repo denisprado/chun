@@ -5,10 +5,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 15px;
 `;
 
 export const Content = styled.div`
-  margin: 0 16.66%;
-  margin: 0 calc(100% / 6);
+  @media screen and (max-width: 684px) {
+    margin: 0 10%;
+    margin: 0 calc(100% / 10);
+  }
+  @media screen and (min-width: 685px) {
+    margin: 0 16.66%;
+    margin: 0 calc(100% / 6);
+  }
 `;

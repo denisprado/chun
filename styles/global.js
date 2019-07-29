@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -64,15 +64,10 @@ const GlobalStyle = createGlobalStyle`
   .image-left {
     flex-direction: row-reverse;
   }
-
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    margin-right: 15px;
-  }
 `;
-
+export const Column = styled.div`
+  flex: ${props => (props.col ? props.col : 12)};
+`;
 export default GlobalStyle;
 
 /**

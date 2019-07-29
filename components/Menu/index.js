@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { server } from "../../config";
 
 function Menu() {
   const [pages, setPages] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3333/pages");
+      const res = await fetch(`${server}/pages`);
       const data = await res.json();
       setPages(data);
     };
@@ -30,7 +31,6 @@ function Menu() {
           <a>contato</a>
         </Link>
       </div>
-      <style jsx>{``}</style>
     </>
   );
 }
