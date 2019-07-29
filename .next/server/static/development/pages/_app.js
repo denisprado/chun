@@ -1198,7 +1198,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\denis\\Documents\\chun\\pages\\_app.js";
+var _jsxFileName = "/home/denis/Sites/chun/pages/_app.js";
 
 
 
