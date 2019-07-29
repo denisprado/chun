@@ -14696,7 +14696,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  flex: ", ";\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  flex-grow: ", ";\n  flex-basis: 30px;\n  flex-shrink: ", ";\n  margin-right: 15px;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -14706,7 +14706,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    outline: 0;\n  }\n\n  html,\n  body,\n  #__next {\n    height: 100%;\n  }\n\n  body {\n    text-rendering: optimizeLegibility !important;\n    -webkit-font-smoothing: antialiased !important;\n    background: #373737;\n    color: #fff;\n    font-family: \"Exo 2\", sans-serif;\n  }\n\n  button {\n    cursor: pointer;\n  }\n\n  p {\n    font-weight: 200;\n    font-size: 22px;\n  }\n\n  a {\n    text-decoration: none;\n    color: blue;\n    padding-right: 15px;\n    color: #9c9c9c;\n    &:hover {\n      color: #8a8a8a;\n    }\n    &:active {\n      color: #777777;\n    }\n  }\n\n\n  h1 {\n    font-size: 60px;\n    font-weight: 100;\n  }\n\n  .hero-image {\n    border: 10px solid #fff;\n  }\n\n  .row {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n  }\n\n  .image-left {\n    flex-direction: row-reverse;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n    outline: 0;\n  }\n\n  html,\n  body,\n  #__next {\n    height: 100%;\n  }\n\n  body {\n    text-rendering: optimizeLegibility !important;\n    -webkit-font-smoothing: antialiased !important;\n    background: #373737;\n    color: #fff;\n    font-family: \"Exo 2\", sans-serif;\n  }\n\n  button {\n    cursor: pointer;\n  }\n\n  p {\n    font-weight: 200;\n    font-size: 22px;\n  }\n\n  a {\n    text-decoration: none;\n    color: blue;\n    padding-right: 15px;\n    color: #9c9c9c;\n    &:hover {\n      color: #8a8a8a;\n    }\n    &:active {\n      color: #777777;\n    }\n  }\n\n\n  h1 {\n    font-size: 60px;\n    font-weight: 100;\n  }\n\n  .hero-image {\n    border: 0px solid #fff;\n  }\n\n  .row {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    width: 100%;\n  }\n\n  .image-left {\n    flex-direction: row-reverse;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -14718,7 +14718,9 @@ function _templateObject() {
 
 var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["createGlobalStyle"])(_templateObject());
 var Column = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2(), function (props) {
-  return props.col ? props.col : 12;
+  return props.col ? props.col : 1;
+}, function (props) {
+  return props.col ? props.col : 1;
 });
 /* harmony default export */ __webpack_exports__["default"] = (GlobalStyle);
 /**

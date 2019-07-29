@@ -8,7 +8,7 @@ const Page = ({ page }) => (
   <Layout>
     <div className="row">
       <Column col={3}>{ReactHtmlParser(page.content)}</Column>
-      <Column col={7}>
+      <Column col={5}>
         <img
           className="hero-image"
           src={page.image.url}

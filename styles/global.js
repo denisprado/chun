@@ -51,7 +51,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .hero-image {
-    border: 10px solid #fff;
+    border: 0px solid #fff;
   }
 
   .row {
@@ -66,7 +66,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 export const Column = styled.div`
-  flex: ${props => (props.col ? props.col : 12)};
+  flex-grow: ${props => (props.col ? props.col : 1)};
+  flex-basis: 30px;
+  flex-shrink: ${props => (props.col ? props.col : 1)};
+  margin-right: 15px;
 `;
 export default GlobalStyle;
 
