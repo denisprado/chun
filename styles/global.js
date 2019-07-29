@@ -65,12 +65,20 @@ const GlobalStyle = createGlobalStyle`
     flex-direction: row-reverse;
   }
 `;
+
 export const Column = styled.div`
   flex-grow: ${props => (props.col ? props.col : 1)};
   flex-basis: 30px;
   flex-shrink: ${props => (props.col ? props.col : 1)};
   margin-right: 15px;
 `;
+
+export const Grid = styled.div`
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(${props => (props.col ? props.col : 8)}, 1fr);
+`;
+
 export default GlobalStyle;
 
 /**

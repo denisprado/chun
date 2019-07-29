@@ -2,28 +2,27 @@ import Layout from "../components/Layout";
 import fetch from "isomorphic-unfetch";
 import Link from "next/link";
 import { server } from "../config";
-
-import { Column } from "../styles/global";
+import { Grid } from "../styles/global";
 
 const Albums = ({ albums }) => (
   <Layout>
-    <div className="row">
+    <Grid col={4}>
       {albums
         ? albums.map(album => (
             <Link key={album.id} href={`/a/${album.id}`}>
-              <Column col={3}>
+              <div>
                 <img
                   className="hero-image"
                   src={`${server}/files/${album.Files[0].path}`}
                   alt={album.title}
-                  width="90%"
+                  width="100%"
                 />
                 <p>{album.title}</p>
-              </Column>
+              </div>
             </Link>
           ))
         : null}
-    </div>
+    </Grid>
   </Layout>
 );
 

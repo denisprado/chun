@@ -1,19 +1,19 @@
 import Layout from "../../components/Layout";
 import fetch from "isomorphic-unfetch";
 import { server } from "../../config";
-
+import { Column } from "../../styles/global";
 const File = ({ file }) => (
   <Layout>
     <div className="row">
       {file ? (
-        <div className="column" col={8}>
+        <Column col={8}>
           <img
             className="hero-image"
             src={file.url}
             alt={file.name}
             width="100%"
           />
-        </div>
+        </Column>
       ) : null}
     </div>
   </Layout>

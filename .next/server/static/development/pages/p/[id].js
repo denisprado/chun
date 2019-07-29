@@ -1930,16 +1930,27 @@ function () {
 /*!**************************!*\
   !*** ./styles/global.js ***!
   \**************************/
-/*! exports provided: Column, default */
+/*! exports provided: Column, Grid, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Column", function() { return Column; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Grid", function() { return Grid; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
 
+
+function _templateObject3() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: grid;\n  grid-gap: 15px;\n  grid-template-columns: repeat(", ", 1fr);\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject2() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  flex-grow: ", ";\n  flex-basis: 30px;\n  flex-shrink: ", ";\n  margin-right: 15px;\n"]);
@@ -1967,6 +1978,9 @@ var Column = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templ
   return props.col ? props.col : 1;
 }, function (props) {
   return props.col ? props.col : 1;
+});
+var Grid = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div(_templateObject3(), function (props) {
+  return props.col ? props.col : 8;
 });
 /* harmony default export */ __webpack_exports__["default"] = (GlobalStyle);
 /**
